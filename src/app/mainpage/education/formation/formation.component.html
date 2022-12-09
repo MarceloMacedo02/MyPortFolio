@@ -1,0 +1,27 @@
+<div class="">
+        <!-- <div class="resume-icon">
+          <i class="uil uil-graduation-hat"></i>
+          <h5 class="mt-n2">Education</h5>
+        </div> -->
+        <!--end resume-icon-->
+
+
+
+        <div class="timeline">
+          <div *ngFor="let item of person.educations" class="time-item  mt-3">
+            <div class="item-info">
+              <div class="font-14">{{item.periodo}}</div>
+              <h5 class="my-1 text-dark">{{item.instituition}}</h5>
+              <h5 class="my-1 text-dark">{{item.courso}}</h5>
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+
+          <!--end time-item-->
+        </div>
+        <!--end timeline-->
+      </div>
+      <!--end col-->
+
+      <!--end col-->
+

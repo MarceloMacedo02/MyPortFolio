@@ -1,0 +1,59 @@
+<section class="section bg-profile clip-profile" id="header">
+    <div class="zoo-profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-print-6 align-self-center mb-3 mb-lg-0">
+            <div class="zoo-profile-main">
+              <div class="zoo-profile-main-pic">
+                <img src={{person.image}} alt="" class="rounded-circle" />
+                <span class="zoo-user-message"><i class="uil uil-comment-dots"></i></span>
+              </div>
+              <!--end zoo-profile-main-pic-->
+              <div class="zoo-profile_user-detail">
+                <h5 class="zoo-user-name"> {{person.name}}</h5>
+                <p class="cd-headline loading-bar">
+                  <span class="cd-words-wrapper">
+                    <b class="is-visible">{{person.title}}</b>
+
+                  </span>
+                </p>
+              </div>
+              <!--end zoo-profile_user-detail-->
+            </div>
+            <!--end profile-main-pic-->
+          </div>
+          <!--end col-->
+          <div class="col-sm-3 col-print-3 ml-auto">
+            <ul class="list-unstyled personal-detail">
+              <li>
+                <i class="'uil uil-phone-volume mr-2"></i> <b>phone </b>:
+                {{person.phone}}
+              </li>
+              <li class="mt-2">
+                <i class="uil uil-envelope mt-2 mr-2"></i> <b>Email </b>:
+                {{person.email}}
+              </li>
+            </ul>
+            <!--end personal-detail-->
+            <ul class="list-inline social-icon mb-0">
+              <li class="list-inline-item">
+                <a href={{person.linkedin}}  target="_blank"  class="bg-blue"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href={{person.github}} target="_blank"  class="bg-secondary"><i class="fa fa-github" aria-hidden="true"></i></a>
+              </li>
+              <!-- <li class="list-inline-item">
+                <a href="#" class="bg-pink"><i class="uil uil-dribbble"></i></a>
+              </li> -->
+            </ul>
+            <!--end social-icon-->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </div>
+    <!--end zoo-profile-->
+  </section>
+  <!--end section-->

@@ -1,0 +1,27 @@
+<div class="resume-icon">
+  <!-- <h5 class="mt-n2">Skills</h5> -->
+</div>
+<div class="skills mt-4">
+
+  <div class="row">
+
+    <div *ngFor="let groupSkills of person.groupSkills" class="col-lg-12 col-print-12 ">
+
+        <h4 class="mt-5 mb-0 "> {{groupSkills.name}}</h4>
+
+      <div class="row">
+        <div *ngFor="let item of groupSkills.skills" class="col-lg-2 col-print-2 1ml-3">
+          <div class="skill-box">
+            <h4 class="skill-title">{{item.skill}}</h4>
+            <div class="progress-line">
+              <span data-percent=100 style="width: {{item.percent}}%"><span
+                  class="percent-tooltip">{{item.percent}}%</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--end skill-->
