@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
   <div class="container">
-    <a class="navbar-brand" href="#"><i class="uil uil-cell text-primary"></i>Zoovara</a>
+    <a class="navbar-brand" href="#"><i class="uil uil-cell text-primary"></i>CV</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -41,6 +41,10 @@
     <!--end container-->
   </section>
 
+  <br>
+  <br>
+  <br>
+<br>
   <section class="section-md">
     <div class="container">
       <div class="row">
@@ -62,11 +66,11 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h4 class="header-title mb-3">Experience & Skills</h4>
+          <h4 class="header-title mb-3">Experience</h4>
         </div>
         <!--end col-->
         <div class="col-sm-12 col-print-12">
-          <app-experience></app-experience>
+          <app-experience  [person]="baseValue"></app-experience>
         </div>
 
         <!--end col-->
@@ -93,133 +97,20 @@
     </div>
     <!--end container-->
   </section>
-  <app-services></app-services>
+  <!-- <app-services></app-services> -->
 
   <!--end section-->
 
   <!--end section-->
 
   <!--end section-->
-  <section class="section-md my-clients">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-md-2 col-6">
-          <img src="./assets/images/brand/1.png" alt="" class="img-fluid" />
-        </div>
-        <!--end col-->
-        <div class="col-md-2 col-6">
-          <img src="./assets/images/brand/2.png" alt="" class="img-fluid" />
-        </div>
-        <!--end col-->
-        <div class="col-md-2 col-6">
-          <img src="./assets/images/brand/3.png" alt="" class="img-fluid" />
-        </div>
-        <!--end col-->
-        <div class="col-md-2 col-6">
-          <img src="./assets/images/brand/4.png" alt="" class="img-fluid" />
-        </div>
-        <!--end col-->
-        <div class="col-md-2 col-6">
-          <img src="./assets/images/brand/5.png" alt="" class="img-fluid" />
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-  </section>
-  <!--end section-->
-  <section class="section-md contact-form">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mb-3">
-          <h4 class="header-title mb-3">Contact Me</h4>
-        </div>
-        <!--end col-->
-        <div class="col-sm-4">
-          <div class="contact-info">
-            <div class="icon"><i class="uil uil-phone-volume"></i></div>
-            <div class="content">
-              <h5>Free Call To Me:</h5>
-              <span>(+1) 234-567-8910</span>
-            </div>
-          </div>
-          <!--end contact-info-->
-          <div class="contact-info">
-            <div class="icon"><i class="uil uil-envelope"></i></div>
-            <div class="content">
-              <h5>Mail Me:</h5>
-              <span>Your@example.com</span>
-            </div>
-          </div>
-          <!--end contact-info-->
-          <div class="contact-info">
-            <div class="icon"><i class="uil uil-map-marker"></i></div>
-            <div class="content">
-              <h5>Find Me:</h5>
-              <span>123 Lorem Ipsum, USA</span>
-            </div>
-          </div>
-          <!--end contact-info-->
-        </div>
-        <!--end col-->
-        <div class="col-sm-8">
-          <div class="contact-form">
-            <div id="message"></div>
-            <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label>Name</label>
-                  <input type="text" name="name" class="form-control" id="name" />
-                </div>
-                <!--end col-->
-                <div class="form-group col-md-6">
-                  <label>Email address</label>
-                  <input type="email" name="email" class="form-control" id="email" />
-                </div>
-                <!--end col-->
-                <div class="form-group col-md-12">
-                  <label>Message</label>
-                  <textarea rows="4" name="message" class="form-control" id="comments"></textarea>
-                </div>
-                <!--end col-->
-                <div class="form-group col-md-12">
-                  <input type="submit" value="Submit now" name="submit" id="submit" class="btn btn-primary px-5 py-2" />
-                  <div id="simple-msg"></div>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </form>
-            <!--end form-->
-          </div>
-          <!--end contact-form-->
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-  </section>
-  <!--end section-->
-  <section class="section-md thanks-text">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h3 class="text-center">Thank you !</h3>
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-  </section>
+
   <!--end section-->
   <footer class="footer-area">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <p class="copyright mb-0 py-4">© 2019. Design By Mannat-Theme</p>
+          <p class="copyright mb-0 py-4"> </p>
         </div>
         <!--end col-->
       </div>
