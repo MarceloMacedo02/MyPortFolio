@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { basePerson, Person } from './models/person';
+import { basePerson } from './models/model-ps';
+import {   Person } from './models/person';
 
 @Component({
   selector: 'app-root',

@@ -18,6 +18,29 @@ export interface Person {
   educations?: Education[];
   certifications?: Certification[];
   cousers?: Course[];
+  experiences?: Experience[];
+}
+export interface Experience {
+  id?: any;
+  periodo?: string;
+  company?: string;
+  principal?: string;
+  description?: string;
+  activeExperience?: ActiveExperience[];
+  skills?: SkillsExperience[];
+}
+export interface SkillsExperience {
+  id?: any;
+  description?: string;
+  skills?: string;
+}
+export interface ActiveExperience {
+  id?: any;
+  periodo?: string;
+  principal?: string;
+  description?: string;
+  environment?:string,
+  skills?: SkillsExperience[];
 }
 export interface Interest {
   interest?: string;
@@ -55,7 +78,146 @@ export interface Course {
   link?: string;
   description?: string;
 }
+const experiences: Experience[] = [
 
+  {
+    periodo: "January/2022 - October/2022",
+    company: "GFT Brasil",
+    principal: "AWS Builder - AWS application developer",
+    description: "AWS consulting company in the financial sector, when I acquired two AWS certifications, I worked on the MAP project in the activity of accelerating and modernizing and migrating some services from the bank's mainframe to the AWS cloud, as a developer I participated in meetings with teams from the bank and AWS to develop applications that would meet the needs migration process with cloud best practices. 100% remote activity with Scrum ceremonies with jira, with delivery of the MVP's programmed in the backlog sprints. Quality control, security and vulnerability of Soft using SonarQube and Fortify",
+    skills: [
+      {description:"Programming Language:",skills: " Java Spring Boot, Python"},
+      {description:"AWS:",skills: " Lambda, Bucket S3, SNS, SQS, ECS, CloudFormation, Well-Architect, Secret Maneger, CloudWatch, DynamoDB"},
+      {description:"Monitoring:",skills: " ClaudWatch, Promepheus and Grafana"},
+      {description:"FrameWork BackEnd:",skills: " Spring Boot, Spring MVC, resilience4j"},
+      {description:"Broker:",skills: " Apache Kafka"},
+      {description:"Pipeline:",skills: " CI/CD, WorkFlow"},
+      {description:"Agile Methodology:",skills: " Spring, Kanban"},
+      {description:"Versioning:",skills: " Git, Github"}],
+    activeExperience: [
+      {
+        periodo:"Microservice 01",
+        principal:"Developer BackEnd",
+        description:  "Microservice in Java Spring Boot triggered by message events published in an SQS queue, the message in json format is converted into an object enriched by business rules, updated or inserted into the DynamoDB database, with idempotency control, resilience(resilience4j retry ), available for consultation by Rest API requests, monitoring in ClaudWatch, Promepheus and Grafana.Tests with JUnit and Mockito, Quality control, security and vulnerability of Soft using SonarQube and Fortify",
+        environment:"Cloud AWS",
+        skills: [
+          {description:"Programming Language:",skills: " Java Spring Boot"},
+          {description:"AWS:",skills: " SQS,ECS, CloudFormation, Well-Architect, Secret Maneger, CloudWatch, DynamoDB"},
+          {description:"Monitoring:",skills: " ClaudWatch, Promepheus and Grafana"},
+          {description: "FrameWork BackEnd:",skills: "Spring Boot, Spring MVC, resilience4j"},
+          {description:"Broker:",skills: " Apache Kafka"},
+          {description:"Pipeline:",skills: " CI/CD, WorkFlow"},
+          {description:"Versioning:",skills: " Git, Github"}],
+      },
+      {
+        periodo:"Microservice 02",
+        principal:"Developer BackEnd",
+        description:  "Microservice on AWS Lambda with python triggered by event in S3, which performs the conversion of positional data file into payload in json format and published in AWS SNS and AWS SQS. Quality control, security and vulnerability of Soft using SonarQube and Fortify",
+        environment:"Cloud AWS",
+        skills: [
+          {description:"Programming Language:",skills: " Python"},
+          {description:"AWS:",skills: " Lambda, Bucket S3, CloudFormation, Well-Architect, Secret Maneger, CloudWatch, SQS, SNS"},
+          {description:"Pipeline:",skills: " CI/CD"},
+          {description:"Versioning:",skills: " Git, Github"}],
+      },
+      {
+        periodo:"Microservice 03",
+        principal:"Developer BackEnd",
+        description:  "Microservice in Java Spring Boot with spring-Kafka triggered by event in Apache Kafka, the message in json format and published in AWS SQS, with idempotency control, resilience(resilience4j retry), monitoring in ClaudWatch, Promepheus and Grafana.Tests with JUnit and Mockito, Quality control, security and vulnerability of Soft using SonarQube and Fortify",
+        environment:"Cloud AWS",
+        skills: [
+          {description:"Programming Language:",skills: " Java Spring Boot"},
+          {description:"AWS:",skills: " SQS,ECS, CloudFormation, Well-Architect, Secret Maneger, CloudWatch"},
+          {description:"Monitoring:",skills: " ClaudWatch, Promepheus and Grafana"},
+          {description:"FrameWork BackEnd:",skills: " Spring Boot, Spring MVC, resilience4j"},
+          {description:"Broker:",skills: " Apache Kafka"},
+          {description:"Pipeline:",skills: " CI/CD, WorkFlow"},
+          {description:"Versioning:",skills: " Git, Github"}],
+      },
+      {
+        periodo:"Microservice 04",
+        principal:"Developer BackEnd",
+        description:  "Microservice on AWS Lambda with python triggered by event in S3, which performs the conversion of positional data file into payload in json format and published in AWS SQS. Quality control, security and vulnerability of Soft using SonarQube and Fortify",
+        environment:"Cloud AWS",
+        skills: [
+          {description:"Programming Language:",skills: " Python"},
+          {description:"AWS:",skills: " Lambda, Bucket S3, CloudFormation, Well-Architect, Secret Maneger, CloudWatch, SQS"},
+          {description:"Pipeline:",skills: " CI/CD"},
+          {description:"Versioning:",skills: " Git, Github"}],
+      },
+
+    ]
+  },
+  {
+    periodo: "January/2009 - November/2021",
+    company: "Tecstart-Serviços",
+    principal: "Architect, software engineer",
+    description: "Partner of the company with 12 years of activities with a focal point in the development of applications for corporate clients such as medical clinics and electronic maintenance company, he exercised the function of specialized consulting accompanying clients in the gathering of requirements, choice of the best technology applied to their needs and in the application development",
+     skills: [
+      {description:"Programming Language:",skills: " java, C#, Delphi"},
+      {description: "FrameWork:",skills: " Spring Boot, Spring MVC, Spring Security, Spring Data,Spring Web,.NetFramwork, VRaptor, JSP, PrimeFaces, JSF, JPA-Hibernate"},
+      {description: "FrameWork FrontEnd:",skills: " Angular, React"},
+      {description: "WEB:",skills: " CSS, Html"},
+      {description:"Data Base:",skills: " Mysql, PostgreSQL, MongoDB"},
+      {description:"Versioning:",skills: " Git, Github"}],
+    activeExperience: [
+      {
+        periodo:"2021",
+        principal: "Developer FullStack",
+        description: "Outsourced development of an application for a software company, with the purpose of registering and controlling the fleet of municipal vehicles. Main activities: vehicle registration, supply control, travel route control, maintenance control and reports",
+        environment:"Java Spring Boot, React",
+        skills: [
+          {description:"Programming Language:",skills: " java"},
+          {description:"FrameWork BackEnd:",skills: " Spring Boot, Spring MVC, Spring Security, Spring Data, Spring Web,  JPA-Hibernate"},
+          {description:"FrameWork FrontEnd:",skills: " React"},
+          {description:"WEB:",skills: " CSS, Html"},
+          {description:"Data Base:",skills: " PostgreSQL"},
+          {description:"Versioning: ",skills: " Git, Github"}],
+      },
+       {
+        periodo:"2020",
+        principal: "Developer FullStack",
+        description: "Modernization, application technology migration to an electronic maintenance company to manage internal activities in the financial, inventory and CRM sectors. Main activities: employee registration, customer registration, supplier registration, product and equipment registration, accounts payable and receivable, cash flow, accounting control, order of services, reports.",
+        environment:"Java Spring Boot, Angular",
+        skills: [
+          {description:"Programming Language:",skills: " java"},
+          {description:"FrameWork BackEnd:",skills: " Spring Boot, Spring MVC, Spring Security, Spring Data,Spring Web, JPA-Hibernate"},
+          {description:"FrameWork FrontEnd:",skills: " Angular"},
+          {description:"WEB:",skills: " JavaScript, CSS, Html, JQuery"},
+          {description:"Data Base:",skills: " PostgreSQL, MongoDB"},
+          {description:"Versioning:",skills: " Git, Github"}],
+      },
+      {
+        periodo:"2019",
+        principal: "Developer",
+        description: "Application development engineering for Medical Clinics. Main activity: developing Print Server software that communicates with Tomography, Magnetic Resonance and Ultrasound equipment using DICOM protocol for paper prints, allowing customization of print layouts and image quality correction (contrast, brightness and gamma).",
+        environment:"Windows",
+        skills: [
+          {description:"Programming Language:",skills: " C#"},
+          {description:"Framework:",skills: " .NetFramwork"}],
+      },
+      {
+        periodo:"2011",
+        principal: "Developer",
+        description: "Application development engineering for an electronic maintenance company to manage internal activities in the financial, inventory and CRM sectors. Main activities: employee registration, customer registration, supplier registration, product and equipment registration, accounts payable and receivable, cash flow, accounting control, order of services, reports.",
+        environment:"Java, Apache Tomcat",
+        skills: [
+          {description:"Programming Language:",skills: " Java2EE"},
+          {description:"FrameWork:",skills: " VRaptor, JSP, PrimeFaces, JSF, JPA-Hibernate"},
+          {description:"WEB:",skills: " JavaScript, CSS, Html, JQuery"},
+          {description:"Data Base:",skills: " Mysql"}],
+      },{
+        periodo:"2009",
+        principal: "Developer",
+        description: "Application engineering and development for a religious institution, Main functionalities: registration of members, registration of departments, registration of cost centers, registering the receipt of amounts from members, cash flow controls, accounts payable and receivable, providing various reports.",
+        environment:"Windows",
+        skills: [
+          {description:"Programming Language:",skills: " Delphi"},
+          {description:"Data Base:",skills: " Mysql"}],
+      }
+    ]
+  }
+]
 const courses: Course[] = [
   {
     periodo: 'October/2022',
@@ -245,8 +407,8 @@ const groupSkills: GroupSkills[] = [
   {
     name: 'Devops',
     skills: [
-        { skill: 'CI/CD', percent: 100 },
-        { skill: 'WorkFlow', percent: 70 },
+      { skill: 'CI/CD', percent: 100 },
+      { skill: 'WorkFlow', percent: 70 },
       { skill: 'Kubernetes', percent: 60 },
       { skill: 'Docker', percent: 90 },
       { skill: 'Git', percent: 100 },
@@ -286,6 +448,7 @@ export const basePerson: Person = {
   cousers: courses,
   groupSkills: groupSkills,
   values: 'Family, organization, loyalty, care, punctuality,',
+  experiences:experiences,
   interests:
     'technological innovations, learning new languages, travel, music, learning new things',
   image: './assets/images/users/user-4.jpg',

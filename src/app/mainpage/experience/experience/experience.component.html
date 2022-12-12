@@ -1,43 +1,49 @@
+<div class="row ">
+  <div class="col-sm-12 col-print-12">
 
-    <div class="row">
-      <div class="col-sm-12 col-print-12">
-
-        <!--end resume-icon-->
-        <div class="timeline">
-          <div class="time-item">
-            <div class="item-info">
-              <div class="font-14">1998 - 2005</div>
-              <h5 class="my-1 text-dark">Highschool</h5>
-              <p>Secondary Education</p>
+    <!--end resume-icon-->
+    <div class="timeline">
+      <div *ngFor="let experiences of person.experiences" class="time-item">
+        <div class="item-info">
+          <div class="font-14">{{experiences.periodo}}</div>
+          <h5 class="my-1 text-dark">{{experiences.company}}</h5>
+          <div class="col-sm-12 col-print-12  align-self-center">
+            <p>
+              <span class="personal-detail-title">Activity</span>
+              <span class="personal-detail-info">{{experiences.principal}}</span>
+            </p>
+            <p>
+              <span class="personal-detail-title">Description</span>
+              <span class="personal-detail-info">{{experiences.description}}</span>
+            </p>
+            <p>
+              <span class="personal-detail-title">Skills</span>
+            </p>
+            <div class="row">
+              <span class=" col-lg-6  col-print-6"
+                *ngFor="let skill of experiences.skills"><strong>{{skill.description}}</strong>{{skill.skills}}</span>
             </div>
-          </div>
-          <!--end time-item-->
-          <div class="time-item mt-3">
-            <div class="item-info">
-              <div class="font-14">2005 - 2008</div>
-              <h5 class="my-1 text-dark">University</h5>
-              <p>Bachelor of Computer Applications</p>
-            </div>
-          </div>
-          <!--end time-item-->
-          <div class="time-item mt-3">
-            <div class="item-info">
-              <div class="font-14">2008 - 2010</div>
-              <h5 class="my-1 text-dark">Master</h5>
 
-              <p>Master of Science</p>
+            <p>
+              <span class="personal-detail-title">Practices</span>
+            </p>
+            <div class="row">
+              <div *ngFor="let skill of experiences.activeExperience"
+                class="time-item  col-lg-12  col-print-12">
 
-              <h5 class="my-1 text-dark">Atividades</h5>
-              <p>
-                It is a long established fact that a reader will be
-                distracted by the readable content of a page when looking
-                at its layout. The point of using Lorem Ipsum is that it
-                has a more-or-less normal distribution of letters, as
-                opposed.
-              </p>
+                <div class="item-info">
+                  <div class="font-14">{{skill.periodo}}</div>
+                  <h5 class="my-1 text-dark">{{skill.principal}}</h5>
+                  <p>{{skill.description}}</p>
+                  <!-- <div class="row">
+                    <span class=" col-lg-6  col-print-6"
+                      *ngFor="let skill of experiences.skills"><strong>{{skill.description}}</strong>{{skill.skills}}</span>
+                  </div> -->
+                </div>
+              </div>
             </div>
+
           </div>
-          <!--end time-item-->
         </div>
         <!--end timeline-->
       </div>
@@ -46,3 +52,5 @@
       <!--end col-->
     </div>
     <!--end row-->
+  </div>
+</div>

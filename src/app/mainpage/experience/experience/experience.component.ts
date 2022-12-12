@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Person } from 'src/app/models/person';
 
 @Component({
   selector: 'app-experience',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ExperienceComponent {
 
+  @Input() person!:Person;
 }
